@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/heart.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test form</title>
+    <script type="module">
+      if (import.meta.env.MODE === 'production') {
+        console.log('production mode');
+      }
+      if (import.meta.env.MODE === 'development') {
+        const link = document.createElement('link');
+        console.log('development mode');
+        link.rel = 'stylesheet';
+        link.href = '/mock-wp-styles/mock-wp-styles.css';
+        document.head.appendChild(link);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root" class="site"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
