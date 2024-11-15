@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test form</title>
     <script type="module">
-      if (import.meta.env.MODE === 'production') {
-        console.log('production mode');
-      }
       if (import.meta.env.MODE === 'development') {
         const link = document.createElement('link');
-        console.log('development mode');
         link.rel = 'stylesheet';
         link.href = '/mock-wp-styles/mock-wp-styles.css';
         document.head.appendChild(link);
+        const link2 = document.createElement('link');
+        link2.rel = 'stylesheet';
+        link2.href = '/mock-wp-styles/mock-container-styles.css';
+        document.head.appendChild(link2);
       }
     </script>
   </head>

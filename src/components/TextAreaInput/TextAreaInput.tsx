@@ -7,10 +7,12 @@ export type TextAreaInputPros = InputContainerProps & React.TextareaHTMLAttribut
 export const TextAreaInput: FunctionComponent<TextAreaInputPros> = ({
   id,
   label,
+  leftAction,
+  rightAction,
   ...textAreaInputProps
 }) => {
   return (
-    <InputContainer {...{ id, label }}>
+    <InputContainer {...{ id, label, leftAction, rightAction }}>
         <textarea {...textAreaInputProps} />
     </InputContainer>
   );

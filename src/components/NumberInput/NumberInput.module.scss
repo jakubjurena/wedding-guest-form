@@ -1,0 +1,17 @@
+.numberInput {
+  text-align: center;
+
+  // Remove default styles
+  &::-webkit-input-placeholder {
+    appearance: textfield;
+  }
+  &::-moz-placeholder {
+    appearance: textfield;
+  }
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button, 
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
